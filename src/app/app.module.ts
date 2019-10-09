@@ -34,7 +34,12 @@ import { LOADER_DATA, LoaderData } from './loader/loader.config';
     OverlayModule,
     MatTableModule
   ],
-  providers: [{ provide: LOADER_DATA, useClass: LoaderData }],
+  providers: [
+    {
+      provide: LOADER_DATA,
+      useValue: new LoaderData('Reloading data...', 'Spinner')
+    }
+  ],
   bootstrap: [AppComponent],
   entryComponents: [LoaderComponent]
 })

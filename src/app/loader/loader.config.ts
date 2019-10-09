@@ -1,10 +1,9 @@
 import { InjectionToken } from '@angular/core';
 
 export class LoaderData {
-  title: string;
-  loaderType: LoaderType;
+  constructor(public title: string, public loaderType: LoaderType) {}
 }
 
 export type LoaderType = 'Spinner' | 'ProgressBar';
 
-export const LOADER_DATA = new InjectionToken<LoaderData>('LOADER_DATA');
+export const LOADER_DATA = new InjectionToken<string>('LOADER_DATA');

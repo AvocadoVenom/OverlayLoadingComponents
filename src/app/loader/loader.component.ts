@@ -30,7 +30,7 @@ import { LoaderData, LOADER_DATA } from './loader.config';
 export class LoaderComponent {
   @Input() templateRef: ViewContainerRef;
 
-  constructor(@Inject(LOADER_DATA) public data: any) {}
+  constructor(@Inject(LOADER_DATA) public readonly data: any) {}
 
   get isSpinner(): boolean {
     return this.data.loaderType === 'Spinner';
